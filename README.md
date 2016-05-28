@@ -1,3 +1,3 @@
 # AmazingEffect
 
-### Aways Updating...
+### Continuous updating
