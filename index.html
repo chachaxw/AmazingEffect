@@ -7,11 +7,22 @@
 <link rel="stylesheet" type="text/css" href="css/style.min.css" />
 <script  type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
 <script type="text/javascript" src="js/modernizr.custom.js"></script>
+<script  type="text/javascript" src="js/elm.min.js"></script>
 <script type="text/javascript" src="js/TweenMax.js"></script>
 </head>
 <body>
-<div class="container"> 
-    <section class="section color1">
+    <div class="big-title">Amazing Effect</div>
+    <section class="section particle-mouse-tracker">
+        <div class="center">
+            <h1>Simple Elm Particle Mouse Tracker</h1>
+            <ol>
+              <li><a href="https://github.com/toastal/Simple-Elm-Mouse-Tracker/blob/master/src/Main.elm" target="_blank">Elm Source</a></li>
+              <li><a href="http://elm-lang.org/" target="_blank">Learn About Elm</a></li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="section color2">
         <h1>Hover Fold Effect</h1>
         <div id="grid" class="center">
             <div class="view">
@@ -19,7 +30,7 @@
                     <span style="font:32px 'The Great Thunder';position:absolute;right:30px;top:20px;color:#333">HELLO</span>
                     <span style="font:24px 'The Great Thunder';position:absolute;right:10px;top:70px;">CHACHA</span>
                 </div>
-                <img src="images/img.jpg"/> 
+                <img src="images/img.jpg"/>
                 <!-- <div class="slice s1" style="background-image: url(image.jpg); ">
                     <span class="overlay"></span>
 
@@ -45,10 +56,10 @@
                 <!-- </div><!-- /s1 -->
             </div>
         </div>
-    </section>  
-    
- <!--progress button-->
-    <section class="section">
+    </section>
+
+    <!--progress button-->
+    <section class="section color3">
         <h1>Submit Button Effect</h1>
         <div id="progress-button" class="progress-button center">
          <button id="btn" type="submit"><span>Submit</span></button>
@@ -70,46 +81,57 @@
           </svg>
     </div>
     </section>
-    
-<!--    material design ripple effect-->
-    <section class="section color2">
-        <h1>Material Design Ripple Effect</h1>   
+
+    <!--    material design ripple effect-->
+    <section class="section color4">
+        <h1>Material Design Ripple Effect</h1>
         <div style="height: 0; width: 0; position: absolute; visibility: hidden;" aria-hidden="true">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false">
-            <symbol id="ripply-scott" viewBox="0 0 100 100">
-                <defs>
-                    <radialGradient id="gradient">
-                        <stop offset="0" stop-color="#0868BB"></stop>
-                        <stop offset="0.25" stop-color="#0075D8"></stop>
-                        <stop offset="0.35" stop-color="#0868BB"></stop>
-                        <stop offset="0.50" stop-color="#0075D8"></stop>
-                        <stop offset="0.60" stop-color="#0868BB"></stop>
-                        <stop offset="0.85" stop-color="#0075D8"></stop>
-                        <stop offset="1" stop-color="#0868BB"></stop>
-                    </radialGradient>
-			    </defs>
-                <circle id="ripply-shape" cx="1" cy="1" r="1"/>
-            </symbol>
-        </svg>
-    </div>
-    <div class="center">
-        <button id="js-ripple-btn" class="button styl-material">
-            Click for Ripple
-            <svg class="ripple-obj" id="js-ripple">
-            <use width="100" height="100" xlink:href="#ripply-scott" class="js-ripple"></use>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false">
+                <symbol id="ripply-scott" viewBox="0 0 100 100">
+                    <defs>
+                        <radialGradient id="gradient">
+                            <stop offset="0" stop-color="#0868BB"></stop>
+                            <stop offset="0.25" stop-color="#0075D8"></stop>
+                            <stop offset="0.35" stop-color="#0868BB"></stop>
+                            <stop offset="0.50" stop-color="#0075D8"></stop>
+                            <stop offset="0.60" stop-color="#0868BB"></stop>
+                            <stop offset="0.85" stop-color="#0075D8"></stop>
+                            <stop offset="1" stop-color="#0868BB"></stop>
+                        </radialGradient>
+    			    </defs>
+                    <circle id="ripply-shape" cx="1" cy="1" r="1"/>
+                </symbol>
             </svg>
-        </button> 
-    </div>
+        </div>
+        <div class="center">
+            <button id="js-ripple-btn" class="button styl-material">
+                Click for Ripple
+                <svg class="ripple-obj" id="js-ripple">
+                <use width="100" height="100" xlink:href="#ripply-scott" class="js-ripple"></use>
+                </svg>
+            </button>
+        </div>
     </section>
-    
-</div> <!-- container end -->    
+
+    <!-- Distorted Button Effects with SVG Filters -->
+    <section class="section color5">
+        <h1>Distorted Button Effects with SVG Filters</h1>
+        <div class="center">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-filters">
+                <defs>
+                    <filter id="filter">
+                        <feTurbulence type="fractalNoise" baseFrequency="0 0" numOctaves="1" result="warp" />
+                        <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+                    </filter>
+                </defs>
+            </svg>
+            <button class="distorted-button">CLICK ME</button>
+        </div>
+    </section>
+
 <script type="text/javascript" src="js/jquery.hoverfold.js"></script>
-<script  type="text/javascript" src="js/progressButton.js"></script>    
-<script  type="text/javascript" src="js/ripplyScott.js"></script>    
-<script type="text/javascript">
-    $(document).ready(function(){      
-        $('#grid').hoverfold();
-    });
-</script>    
+<script type="text/javascript" src="js/progressButton.js"></script>
+<script type="text/javascript" src="js/ripplyScott.js"></script>
+<script type="text/javascript" src="js/main.min.js"></script>
 </body>
 </html>

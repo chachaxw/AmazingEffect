@@ -1,30 +1,51 @@
 @font-face{ font-family:'The Great Thunder';src:url(../fonts/TheGreatThunder.ttf)}
 
-body{ 
+body {
     background-color: white;
+}
+a {
+  color: inherit;
+  -webkit-transition-property: background-color, color;
+  transition-property: background-color, color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+a:hover, a:focus {
+  background-color: rgba(194, 173, 235, 0.8);
+  color: #18141f;
+}
+a:focus:active {
+  background-color: #fff;
 }
 
 .section {
     width: 100vw;
-    height: 60vh;
+    height: 70vh;
     position: relative;
     text-align: center;
 }
 .section.color1 {
-    background: rgb(240,240,246);
+    background: rgba(240,240,246,0.9);
 }
 .section.color2{
-    background: rgb(247,248,244);
+    background: rgba(247,248,244,0.9);
 }
 .section.color3{
-    background: rgb(231,215,209);
+    background: rgba(160, 249, 194,0.9);
+}
+.section.color4{
+    background: rgba(194, 161, 247,0.9);
+}
+.section.color5{
+    background: rgba(0, 188, 212, 0.9);
 }
 h1 {
     padding: 30px;
     font-size: 32px;
     margin: 0;
 }
-
 .center {
     position: absolute;
     top: 50%;
@@ -34,39 +55,54 @@ h1 {
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+.big-title {
+    font-size: 180px;
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+    background: url(../images/background.jpg) center no-repeat;
+    background-size: cover;
+    font-weight: bolder;
+    color: #2dceef;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
 
 /* Hover Fold Effect */
-.view { 
-    width:640px; 
-    height:400px; 
-    background-color: #EEE; 
+.view {
+    width:640px;
+    height:400px;
+    margin-top: 50px;
+    background-color: #EEE;
     background-image: -webkit-linear-gradient(hsla(0,0%,0%,.025), hsla(0,0%,100%,.05) 33%, hsla(0,0%,0%,.05) 33%, hsla(0,0%,100%,.05) 67%, hsla(0,0%,0%,.05) 67%, hsla(0,0%,100%,.025));
-    -webkit-perspective: 800px; 
-    -moz-perspective: 800px; 
-    -o-perspective: 800px; 
-    -ms-perspective: 800px; 
-    perspective: 800px; 
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    -ms-perspective: 800px;
+    perspective: 800px;
     box-shadow: inset 0 0 0 .2em hsla(0,0%,0%,.1),
-    inset 0 0 2em hsla(0,0%,0%,.05),0 .2em .25em hsla(0,0%,0%,.5);
+    inset 0 0 2em hsla(0,0%,0%,.05),0 .2em .25em hsla(0,0%,0%,.4);
 }
 
 .view .slice {
 	width:128px;
 	height: 100%;
 	z-index: 100;
-    
+
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	-o-transform-style: preserve-3d;
 	-ms-transform-style: preserve-3d;
 	transform-style: preserve-3d;
-	
+
 	-webkit-transform-origin: left center;
 	-moz-transform-origin: left center;
 	-o-transform-origin: left center;
 	-ms-transform-origin: left center;
 	transform-origin: left center;
-	
+
 	-webkit-transition: -webkit-transform 150ms ease-in-out;
 	-moz-transition: -moz-transform 150ms ease-in-out;
 	-o-transition: -o-transform 150ms ease-in-out;
@@ -83,9 +119,9 @@ h1 {
 	background-image: -webkit-linear-gradient(hsla(0,0%,0%,.025), hsla(0,0%,100%,.05) 33%, hsla(0,0%,0%,.05) 33%, hsla(0,0%,100%,.05) 67%, hsla(0,0%,0%,.05) 67%, hsla(0,0%,100%,.025));
 	z-index: 0;
 }
-.view .s2, 
-.view .s3, 
-.view .s4, 
+.view .s2,
+.view .s3,
+.view .s4,
 .view .s5 {
 	-webkit-transform: translate3d(128px,0,0);
 	-moz-transform: translate3d(128px,0,0);
@@ -143,7 +179,7 @@ h1 {
 	-ms-transform: translate3d(127px,0,0) rotate3d(0,1,0,-45deg);
 	transform: translate3d(127px,0,0) rotate3d(0,1,0,-45deg);
 }
-.view:hover .s3, 
+.view:hover .s3,
 .view:hover .s5 {
 	-webkit-transform: translate3d(127px,0,0) rotate3d(0,1,0,90deg);
 	-moz-transform: translate3d(127px,0,0) rotate3d(0,1,0,90deg);
@@ -203,7 +239,7 @@ h1 {
 .view {
     overflow: hidden;
 }
- 
+
 .view:hover img {
     animation:mymove 0.5s;animation-fill-mode:forwards;
 	-webkit-animation:mymove 0.5s;-webkit-animation-fill-mode:forwards;
@@ -215,13 +251,13 @@ h1 {
 @-webkit-keyframes mymove {
 	from{left:0}
 	to {left:-180px}
-} 
-	
+}
+
 .view div.view-back {
     background: #666;
 } */
 
-	
+
 
 /* Submit Button Effect */
 .progress-button{
@@ -305,7 +341,7 @@ h1 {
     border-color: #1ECD97;
     background-color: #1ECD97;
 }
- 
+
 .error.progress-button button {
     border-color: #FB797E;
     background-color: #FB797E;
@@ -343,17 +379,14 @@ h1 {
     font-size: 20px;
     color: aliceblue;
 }
-
 .button:hover{
     opacity: 0.8;
 }
-
 .styl-material{
     -webkit-transition: 200ms background cubic-bezier(0.4, 0, 0.2, 1);
 transition: 200ms background cubic-bezier(0.4, 0, 0.2, 1);
     background: #0075D8;
 }
-
 .ripple-obj{
     height: 100%;
     pointer-events: none;
@@ -362,20 +395,58 @@ transition: 200ms background cubic-bezier(0.4, 0, 0.2, 1);
     left: 0;
     width: 100%;
     z-index: 0;
-    fill: url(#gradient); 
+    fill: url(#gradient);
 }
-
 .ripple-obj use {
   opacity: 0;
-} 
+}
 
 
+/* Simple Elm Particle Mouse Tracker */
+.particle-mouse-tracker {
+    height: 100vh;
+    z-index: 1;
+}
+body > div:last-child {
+    position: absolute;
+    top: 0;
+}
+.particle-mouse-tracker > div {
+    margin-top: 20vh;
+}
 
 
+/* Distorted Button Effects with SVG Filters */
+.svg-filters {
+    position: absolute;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+}
+.distorted-button {
+    /* other styles */
+    padding: 20px 40px;
+    border: none;
+    background: #222;
+    color: white;
+    outline: none;
+    transform: translateZ(0);
+    -webkit-filter: url("#filter");
+    filter: url("/#filter");
+}
+.distorted-button:hover {
+    background-color: #2CD892;
+}
 
-
-
-
-
-
-
+/*  */
+.section.filter-background {
+    height: 100vh;
+}
+.amazing-bg {
+    width: 100%;
+    height: 100%;
+    background: url(../images/hero-img.png) center no-repeat;
+    background-size: cover;
+    -webkit-filter: url("#filter-bg");
+    filter: url(/#filter-bg);
+}
