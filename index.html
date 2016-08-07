@@ -9,6 +9,7 @@
 <script type="text/javascript" src="js/modernizr.custom.js"></script>
 <script  type="text/javascript" src="js/elm.min.js"></script>
 <script type="text/javascript" src="js/TweenMax.js"></script>
+<script type="text/javascript" src="js/classie.js"></script>
 </head>
 <body>
     <div class="big-title">Amazing Effect</div>
@@ -31,55 +32,40 @@
                     <span style="font:24px 'The Great Thunder';position:absolute;right:10px;top:70px;">CHACHA</span>
                 </div>
                 <img src="images/img.jpg"/>
-                <!-- <div class="slice s1" style="background-image: url(image.jpg); ">
-                    <span class="overlay"></span>
-
-                    <div class="slice s2" style="background-image: url(image.jpg); ">
-                        <span class="overlay"></span>
-
-                        <div class="slice s3" style="background-image: url(image.jpg); ">
-                            <span class="overlay"></span>
-
-                            <div class="slice s4" style="background-image: url(image.jpg); ">
-                                <span class="overlay"></span>
-
-                                <div class="slice s5" style="background-image: url(image.jpg); ">
-                                    <span class="overlay"></span>
-                                </div><!-- /s5 -->
-
-                          <!-- </div><!-- /s4 -->
-
-                       <!-- </div><!-- /s3 -->
-
-                    <!-- </div><!-- /s2 -->
-
-                <!-- </div><!-- /s1 -->
             </div>
         </div>
     </section>
 
     <!--progress button-->
-    <section class="section color3">
+    <section class="section color1">
         <h1>Submit Button Effect</h1>
-        <div id="progress-button" class="progress-button center">
-         <button id="btn" type="submit"><span>Submit</span></button>
-         <!-- svg circle for progress indication -->
-          <svg width="70" height="70" class="progress-circle">
-            <path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/>
-          </svg>
-          <!-- checkmark to show on success -->
-          <svg class="checkmark" width="70" height="70">
-            <path d="m31.5,46.5l15.3,-23.2"/>
-            <path d="m31.5,46.5l-8.5,-7.1"/>
-          </svg>
-          <!-- cross to show on error -->
-          <svg class="cross" width="70" height="70">
-            <path d="m35,35l-9.3,-9.3"/>
-            <path d="m35,35l9.3,9.3"/>
-            <path d="m35,35l-9.3,9.3"/>
-            <path d="m35,35l9.3,-9.3"/>
-          </svg>
-    </div>
+        <div class="center">
+            <div class="progress-button">
+                <button><span>Submit</span></button>
+                <!-- svg circle for progress indication -->
+                <svg width="70" height="70" class="progress-circle">
+                    <path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/>
+                </svg>
+                <!-- checkmark to show on success -->
+                <svg class="checkmark" width="70" height="70">
+                    <path d="m31.5,46.5l15.3,-23.2"/>
+                    <path d="m31.5,46.5l-8.5,-7.1"/>
+                </svg>
+                <!-- cross to show on error -->
+                <svg class="cross" width="70" height="70">
+                    <path d="m35,35l-9.3,-9.3"/>
+                    <path d="m35,35l9.3,9.3"/>
+                    <path d="m35,35l-9.3,9.3"/>
+                    <path d="m35,35l9.3,-9.3"/>
+                </svg>
+            </div>
+            <div class="progress-button">
+              <button><span>Submit</span></button>
+              <svg class="progress-circle" width="70" height="70"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg>
+              <svg class="checkmark" width="70" height="70"><path d="m31.5,46.5l15.3,-23.2"/><path d="m31.5,46.5l-8.5,-7.1"/></svg>
+              <svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg>
+            </div><!-- /progress-button -->
+        </div>
     </section>
 
     <!--    material design ripple effect-->
@@ -98,7 +84,7 @@
                             <stop offset="0.85" stop-color="#0075D8"></stop>
                             <stop offset="1" stop-color="#0868BB"></stop>
                         </radialGradient>
-    			    </defs>
+    			          </defs>
                     <circle id="ripply-shape" cx="1" cy="1" r="1"/>
                 </symbol>
             </svg>
@@ -116,21 +102,64 @@
     <!-- Distorted Button Effects with SVG Filters -->
     <section class="section color5">
         <h1>Distorted Button Effects with SVG Filters</h1>
-        <div class="center">
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-filters">
-                <defs>
-                    <filter id="filter">
-                        <feTurbulence type="fractalNoise" baseFrequency="0 0" numOctaves="1" result="warp" />
-                        <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
-                    </filter>
-                </defs>
-            </svg>
-            <button class="distorted-button">CLICK ME</button>
+        <div class="center distorted-button-group">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-filters">
+                    <defs>
+                        <filter id="filter1">
+                            <feTurbulence type="fractalNoise" baseFrequency="0 0" numOctaves="1" result="warp" ></feTurbulence>
+                            <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" ></feDisplacementMap>
+                        </filter>
+                    </defs>
+                </svg>
+                <button class="distorted-button btn1">CLICK ME</button>
+            </span>
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-filters">
+                    <defs>
+                        <filter id="filter2">
+                            <feTurbulence type="fractalNoise" baseFrequency="0 0" numOctaves="1" result="warp" ></feTurbulence>
+                            <feoffset dx="-90" dy="-90" result="wrapOffset"></feoffset>
+                            <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warpOffset" ></feDisplacementMap>
+                        </filter>
+                    </defs>
+                </svg>
+                <button class="distorted-button btn2">CLICK ME</button>
+            </span>
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-filters">
+                    <defs>
+                        <filter id="filter3">
+                            <fegaussianblur id="SourceGraphic" stdDeviation="7" result="blur" ></fegaussianblur>
+                            <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"></fecolormatrix>
+                            <fecomposite in="SourceGraphic" in2="goo" ></fecomposite>
+                        </filter>
+                    </defs>
+                </svg>
+                <button class="distorted-button btn3">
+                    CLICK ME
+                    <span class="button-bg" style="transform: matrix(1,0,0,1,0,0);"></span>
+                </button>
+            </span>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-filters">
+                    <defs>
+                        <filter id="filter4">
+                            <feTurbulence type="fractalNoise" baseFrequency="0 0" numOctaves="1" result="warp" ></feTurbulence>
+                            <feoffset dx="0" dy="-90" result="wrapOffset"></feoffset>
+                            <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warpOffset" ></feDisplacementMap>
+                        </filter>
+                    </defs>
+                </svg>
+                <button class="distorted-button btn4">
+                    <span class="button__text">PLAY</span>
+                </button>
+            </div>
         </div>
     </section>
 
 <script type="text/javascript" src="js/jquery.hoverfold.js"></script>
-<script type="text/javascript" src="js/progressButton.js"></script>
+<script type="text/javascript" src="js/progressButton.min.js"></script>
 <script type="text/javascript" src="js/ripplyScott.js"></script>
 <script type="text/javascript" src="js/main.min.js"></script>
 </body>
